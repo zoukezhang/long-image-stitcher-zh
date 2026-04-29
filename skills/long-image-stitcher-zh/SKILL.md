@@ -35,11 +35,13 @@ python3 -m pip install -r skills/long-image-stitcher-zh/scripts/requirements.txt
 - direction：竖排（vertical）或横排（horizontal）
 - 图片来源：文件夹路径或图片路径列表，并说明顺序规则（按文件名数字排序/按时间/手动指定）
 - 输出：输出文件名与格式（png/jpg）以及保存位置
-- “保持原分辨率”：等价于 normalize=pad（不缩放，只补背景对齐）
+- “保持原分辨率不缩放”：等价于 normalize=pad（不缩放，只补背景对齐）
+- “全屏/铺满宽度（竖排）或铺满高度（横排）”：等价于 normalize=scale（等比缩放到统一宽/高后再拼接，可能会影响清晰度）
 
 示例：
 
 - “把 ‘导出图片’ 文件夹下的图片按文件名顺序竖排拼接成一张长图，保持原分辨率不缩放，输出到 ‘导出图片/拼接_竖屏.png’。”
+- “把 ‘拼图素材’ 文件夹里的图片竖排拼接，每张都铺满宽度再拼接，输出到 ‘拼图素材/拼接_竖排_全宽.png’。”
 - “把 a.png、b.png、c.png 横向拼接做对比图，间距 16px，白色背景，输出为 jpg。”
 
 ## 适用场景
